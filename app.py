@@ -75,6 +75,13 @@ def main():
         file_name=f"{route}_mileage_filtered.csv",
         mime="text/csv",
     )
+    # ------------ 頁面底部插入圖片 ---------------
+    st.divider()
+    image_path = Path(__file__).parent / "fifi.jpg"
+    if image_path.exists():
+        st.image(str(image_path), use_column_width=True, caption="fifi")
+    else:
+        st.info("📷 請將 **fifi.jpg** 放在與程式同一目錄，即可在此處顯示圖片。")
 
 
 if __name__ == "__main__":
